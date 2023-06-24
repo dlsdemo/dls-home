@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modern Landing Page</title>
+    <title>Data Localization Suite (DLS) Demos - Cloudflare</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
     <!-- If you see this comment, then the Auto Minify feature is disabled. -->
@@ -68,7 +68,7 @@
             always return a "colo" within the US.
           </p>
           <div class="code-section">
-            <pre><code>$ curl -sI https://bootstrap.dlsdemo.com/ | grep -oE 'cf-ray: [^[:space:]]+' | grep -oE '[^-]+$' | awk '{print "\"colo\":\""$0"\""}'<br><br>"colo":"IAD"<br><br></code></pre>
+            <pre><code>$ curl -sI https://landing.dlsdemo.com/ | grep -oE 'cf-ray: [^[:space:]]+' | grep -oE '[^-]+$' | awk '{print "\"colo\":\""$0"\""}'<br><br>"colo":"IAD"<br><br></code></pre>
           </div>
         </div>
       </div>
