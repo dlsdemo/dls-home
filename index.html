@@ -1,37 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modern Landing Page</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <div class="title">
-      <h1>Data Localization Suite (DLS) Demo</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Landing Page</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- If you see this comment, then the Auto Minify feature is disabled. -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Data Localization Suite (DLS) Demo</h1>
+      </div>
+      <div class="description">
+        <p>
+          <a
+            href="https://developers.cloudflare.com/data-localization/"
+            target="_blank"
+            rel="external nofollow noreferrer"
+            >Cloudflare DLS</a
+          >
+          is a set of products that helps customers who want to maintain local
+          control over their traffic while retaining the security benefits of a
+          global network.
+        </p>
+      </div>
+      <div class="box-container">
+        <div class="box">
+          <h2>Cloudflare Workers</h2>
+          <p>Without Regional Services, essentially set to <span>Earth</span>, this Worker will always return a "colo" that is closest to the client.</p>
+          <div class="code-section" id="box-1-code">
+            <pre><code>Loading...</code></pre>
+          </div>
+        </div>
+        <div class="box">
+          <h2>Cloudflare Workers + Regional Services</h2>
+          <p>With Regional Services set to <span>United States of America (US)</span>, this Worker will always return a "colo" within the US.</p>
+          <div class="code-section">
+            <pre><code>$ curl -k -s https://workers.dlsdemo.com/ | grep -o '"colo": *"[^"]*"' <br><br>"colo": "IAD"<br><br></code></pre>
+          </div>
+        </div>
+        <div class="box">
+          <h2>Box 3</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="code-section">
+            <pre><code>// Add your code snippet here</code></pre>
+          </div>
+        </div>
+        <div class="box">
+          <h2>Box 4</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="code-section">
+            <pre><code>// Add your code snippet here</code></pre>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="description">
-      <p>A suite of tools for data localization and protection.</p>
-    </div>
-    <div class="box-container">
-      <div class="box">
-        <h2>Box 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="box">
-        <h2>Box 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="box">
-        <h2>Box 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="box">
-        <h2>Box 4</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </div>
-  </div>
-</body>
+  </body>
 </html>
