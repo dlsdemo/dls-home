@@ -29,27 +29,39 @@
       <div class="box-container">
         <div class="box">
           <h2>Cloudflare Workers</h2>
-          <p>Without Regional Services, essentially set to <span>Earth</span>, this Worker will always return a "colo" that is closest to the client.</p>
+          <p>
+            Without Regional Services, essentially set to <span>Earth</span>,
+            this Worker will always return a "colo" that is closest to the
+            client.
+          </p>
           <div class="code-section" id="box-1-code">
             <pre><code>Loading...</code></pre>
           </div>
         </div>
         <div class="box">
           <h2>Cloudflare Workers + Regional Services</h2>
-          <p>With Regional Services set to <span>United States of America (US)</span>, this Worker will always return a "colo" within the US.</p>
+          <p>
+            With Regional Services set to
+            <span>United States of America (US)</span>, this Worker will always
+            return a "colo" within the US.
+          </p>
           <div class="code-section">
-            <pre><code>$ curl -k -s https://workers.dlsdemo.com/ | grep -o '"colo": *"[^"]*"' <br><br>"colo": "IAD"<br><br></code></pre>
+            <pre><code>$ curl -s https://workers.dlsdemo.com/ | grep -o '"colo": *"[^"]*"'<br><br>"colo": "IAD"<br><br></code></pre>
           </div>
         </div>
         <div class="box">
-          <h2>Box 3</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <div class="code-section">
-            <pre><code>// Add your code snippet here</code></pre>
+          <h2>Cloudflare Pages</h2>
+          <p>
+            Without Regional Services, essentially set to <span>Earth</span>,
+            this Pages project will always return a "colo" that is closest to
+            the client.
+          </p>
+          <div class="code-section" id="box-2-code">
+            <pre><code>Loading...</code></pre>
           </div>
         </div>
         <div class="box">
-          <h2>Box 4</h2>
+          <h2>Cloudflare Pages + Regional Services</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <div class="code-section">
             <pre><code>// Add your code snippet here</code></pre>
