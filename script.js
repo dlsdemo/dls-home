@@ -17,6 +17,6 @@ fetch(worker2Route)
   .then((data) => {
     const codeSection = document.getElementById("box-2-code");
     //codeSection.innerHTML = `<pre><code>${data}</code></pre>`;
-    codeSection.innerHTML = `<pre><code>$ curl -sI https://landing.dlsdemo.com/ | grep -oE 'cf-ray: [^[:space:]]+' | grep -oE '[^-]+$' | awk '{print "\"colo\":\""$0"\""}'<br><br>${data}<br><br></code></pre>`;
+    codeSection.innerHTML = `<pre><code>$ curl -sI https://bootstrap.dlsdemo.com/ | grep -oE 'cf-ray: [^[:space:]]+' | grep -oE '[^-]+$' | awk '{print "\"colo\":\""$0"\""}'<br><br>${data}<br><br></code></pre>`;
   })
   .catch((error) => console.log(error));

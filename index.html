@@ -62,9 +62,13 @@
         </div>
         <div class="box">
           <h2>Cloudflare Pages + Regional Services</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>
+            With Regional Services set to
+            <span>United States of America (US)</span>, this Pages project will
+            always return a "colo" within the US.
+          </p>
           <div class="code-section">
-            <pre><code>// Add your code snippet here</code></pre>
+            <pre><code>$ curl -sI https://bootstrap.dlsdemo.com/ | grep -oE 'cf-ray: [^[:space:]]+' | grep -oE '[^-]+$' | awk '{print "\"colo\":\""$0"\""}'<br><br>"colo":"IAD"<br><br></code></pre>
           </div>
         </div>
       </div>
