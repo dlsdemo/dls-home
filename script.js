@@ -28,7 +28,7 @@ fetch(worker3Route)
   .then((data) => {
     const codeSection = document.getElementById("box-3-code");
     //codeSection.innerHTML = `<pre><code>${data}</code></pre>`;
-    codeSection.innerHTML = `<pre><code>$ url -s https://workers.dlsdemo.com/ | grep -o '"colo": *"[^"]*"' <br><br>${data}<br><br></code></pre>`;
+    codeSection.innerHTML = `<pre><code>$ curl -s https://workers.dlsdemo.com/ | grep -o '"colo": *"[^"]*"' <br><br>${data}<br><br></code></pre>`;
   })
   .catch((error) => console.log(error));
 
