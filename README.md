@@ -1,6 +1,6 @@
 # DLS Home
 
-Live demo of Cloudflare Data Localization Suite (DLS).
+Live DEMO of Cloudflare Data Localization Suite (DLS).
 
 Specifically of Regional Services and Customer Metadata Boundary.
 
