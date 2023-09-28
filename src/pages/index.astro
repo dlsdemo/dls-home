@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Data Localization Suite (DLS) Demos - Cloudflare">
+	<main>
+		<h1>Data Localization Suite <span class="text-gradient">(DLS)</span></h1>
+		<p class="description">
+			<a href="https://developers.cloudflare.com/data-localization/" target="_blank" rel="external nofollow noreferrer">Cloudflare DLS</a> is a set of products that helps customers who want to maintain local control over their traffic while retaining the security benefits of a global network.</p>
+		<hr>
+		<div>
+			<h2>Regional Services</h2>
+			<p class="mini-description">
+				Regional Services enables Cloudflare to <strong>decrypt and inspect HTTPS traffic</strong> only within the customer's selected region, ensuring security by decrypting and applying Layer 7 security measures at the designated regional data center rather than the initial global entry point.
+			</p>
+			<ul role="list" class="link-card-grid">
+				<Card
+					title="Cloudflare Workers"
+					region="Earth 🌍"
+					body="Without Regional Services, essentially set to Earth, this Worker will always return a 'colo' that is closest to the client."
+					route="https://dlsdemo.com/getcolo-workers"
+				/>
+				<Card
+					title="Cloudflare Workers + Regional Services"
+					region="United States 🇺🇸"
+					body="With Regional Services set to United States of America (US), this Worker will always return a 'colo' within the US."
+					route="https://usworkers.dlsdemo.com/"
+				/>
+				<Card
+					title="Cloudflare Workers + Regional Services"
+					region="European Union 🇪🇺"
+					body="With Regional Services set to European Union (EU), this Worker will always return a 'colo' within the EU."
+					route="https://euworkers.dlsdemo.com/"
+				/>
+				<Card
+					title="Cloudflare Pages"
+					region="Earth 🌍"
+					body="Without Regional Services, essentially set to Earth, this Pages project will always return a 'colo' that is closest to the client."
+					route="https://bootstrap.dlsdemo.com/"
+					type="fetch"
+				/>
+				<Card
+					title="Cloudflare Pages + Regional Services"
+					region="United States 🇺🇸"
+					body="With Regional Services set to United States of America (US), this Pages project will always return a 'colo' within the US."
+					route="https://us.dlsdemo.com/"
+					type="fetch"
+				/>
+				<Card
+					title="Cloudflare Pages + Regional Services"
+					region="European Union 🇪🇺"
+					body="With Regional Services set to European Union (EU), this Pages project will always return a 'colo' within the EU."
+					route="https://europe.dlsdemo.com/"
+					type="fetch"
+				/>
+			</ul>
+		</div>
+		<hr>
+		<div>
+			<h2>Customer Metadata Boundary</h2>
+			<p class="mini-description">
+				Customer Metadata Boundary ensures that <strong>end user traffic logs</strong> (Customer Logs) processed by Cloudflare stay within the customer's chosen region (EU and US currently supported).
+			</p>
+			<ul role="list" class="link-card-grid-cmb">
+				<Card
+					title="httpRequestsAdaptiveGroups"
+					region="Earth 🌍"
+					body="Without Customer Metadata Boundary, essentially set to Earth, all Customer Logs, like i.e. HTTP Requests, are available."
+					route="https://graphql-httprequestsadaptivegroups.dls-demo.workers.dev/"
+					type="data"
+				/>
+				<Card
+					title="workersInvocationsAdaptive"
+					region="European Union 🇪🇺"
+					body="With Customer Metadata Boundary set to the European Union (EU), some Customer Logs, like i.e. Workers Metrics, might not be available. They are empty."
+					route="https://graphql-workersinvocationsadaptive.dls-demo.workers.dev/"
+					type="data"
+				/>
+			</ul>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	/* Default styles for larger screens */
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 900px;
+		max-width: calc(100% - 2rem);
+		color: black;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	a {
+		color: rgb(var(--accent-light));
+		font-weight: bold;
+		transition: color 0.3s ease-in-out;
+		&:hover {
+			color: rgb(var(--accent));
+		}
+	}
+	strong {
+		color: rgb(var(--accent-light));
+	}
+	.mini-description {
+		font-size: 0.9em;
+		margin-bottom: 2rem;
+	}
+	.description {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.description code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.description strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		padding: 0;
+	}
+	.link-card-grid-cmb {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+		padding: 0;
+	}
+	/* Media query for smaller screens */
+	@media (max-width: 768px) {
+		main {
+			width: 100%;
+			padding: 0.5rem; /* Adjust padding as needed for smaller screens */
+			font-size: 18px; /* Adjust font size for smaller screens */
+		}
+		.link-card-grid {
+			grid-template-columns: 1fr; /* Display one card per row on smaller screens */
+			gap: 1rem; /* Adjust gap as needed for smaller screens */
+		}
+	}
+</style>
