@@ -2,6 +2,8 @@
 
 Live demo of Cloudflare Data Localization Suite (DLS).
 
+Specifically of Regional Services and Customer Metadata Boundary.
+
 ## 🚀 Project Structure
 
 Inside of the Astro project:
