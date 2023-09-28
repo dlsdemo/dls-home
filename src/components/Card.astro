@@ -41,7 +41,7 @@ async function getData(route) {
 		return data
 	}
 }
-const chartOutput = getData(route);
+const chartOutput = await getData(route);
 ---
 
 <li class="link-card">
@@ -57,7 +57,7 @@ const chartOutput = getData(route);
 		</p>
 		<code>
 			{codeOutput !== null ? codeOutput : 'Error executing code'}
-			{chartOutput} 
+			{chartOutput !== null ? chartOutput : 'Error executing code'}
 		</code>
 	</div>
 </li>
