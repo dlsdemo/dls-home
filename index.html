@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Localization Suite (DLS) Demos - Cloudflare</title>
+    <meta
+      name="description"
+      content="Demo of Cloudflare Data Localization Suite (DLS) features."
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main data-cid-j7pv25f6>
+      <h1 data-cid-j7pv25f6>
+        Data Localization Suite
+        <span class="text-gradient" data-cid-j7pv25f6>(DLS)</span>
+      </h1>
+      <p class="description" data-cid-j7pv25f6>
+        <a
+          href="https://developers.cloudflare.com/data-localization/"
+          target="_blank"
+          rel="external nofollow noreferrer"
+          data-cid-j7pv25f6
+          >Cloudflare DLS</a
+        >
+        is a set of products that helps customers who want to maintain local
+        control over their traffic while retaining the security benefits of a
+        global network.
+      </p>
+      <hr data-cid-j7pv25f6 />
+      <div data-cid-j7pv25f6>
+        <h2 data-cid-j7pv25f6>Regional Services</h2>
+        <p class="mini-description" data-cid-j7pv25f6>
+          Regional Services enables Cloudflare to
+          <strong data-cid-j7pv25f6>decrypt and inspect HTTPS traffic</strong>
+          only within the customer's selected region, ensuring security by
+          decrypting and applying Layer 7 security measures at the designated
+          regional data center rather than the initial global entry point.
+        </p>
+        <ul role="list" class="link-card-grid" data-cid-j7pv25f6>
+          <li class="link-card" data-cid-dohjnao5>
+            <div data-cid-dohjnao5>
+              <h2 data-cid-dohjnao5>Cloudflare Workers</h2>
+              <div class="region-label" data-cid-dohjnao5>Earth 🌍</div>
+              <p data-cid-dohjnao5>
+                Without Regional Services, essentially set to Earth, this Worker
+                will always return a &#39;colo&#39; that is closest to the
+                client.
+              </p>
+              <div class="code-section" id="box-1-code">
+                <pre><code data-cid-dohjnao5>Loading...</code></pre>
+              </div>
+            </div>
+          </li>
+          <li class="link-card" data-cid-dohjnao5>
+            <div data-cid-dohjnao5>
+              <h2 data-cid-dohjnao5>Cloudflare Workers + Regional Services</h2>
+              <div class="region-label" data-cid-dohjnao5>United States 🇺🇸</div>
+              <p data-cid-dohjnao5>
+                With Regional Services set to United States of America (US),
+                this Worker will always return a &#39;colo&#39; within the US.
+              </p>
+              <div class="code-section" id="box-2-code">
+                <pre><code data-cid-dohjnao5>Loading...</code></pre>
+              </div>
+            </div>
+          </li>
+          <li class="link-card" data-cid-dohjnao5>
+            <div data-cid-dohjnao5>
+              <h2 data-cid-dohjnao5>Cloudflare Workers + Regional Services</h2>
+              <div class="region-label" data-cid-dohjnao5>
+                European Union 🇪🇺
+              </div>
+              <p data-cid-dohjnao5>
+                With Regional Services set to European Union (EU), this Worker
+                will always return a &#39;colo&#39; within the EU.
+              </p>
+              <div class="code-section" id="box-3-code">
+                <pre><code data-cid-dohjnao5>Loading...</code></pre>
+              </div>
+            </div>
+          </li>
+          <li class="link-card" data-cid-dohjnao5>
+            <div data-cid-dohjnao5>
+              <h2 data-cid-dohjnao5>Cloudflare Pages</h2>
+              <div class="region-label" data-cid-dohjnao5>Earth 🌍</div>
+              <p data-cid-dohjnao5>
+                Without Regional Services, essentially set to Earth, this Pages
+                project will always return a &#39;colo&#39; that is closest to
+                the client.
+              </p>
+              <div class="code-section" id="box-4-code">
+                <pre><code data-cid-dohjnao5>Loading...</code></pre>
+              </div>
+            </div>
+          </li>
+          <li class="link-card" data-cid-dohjnao5>
+            <div data-cid-dohjnao5>
+              <h2 data-cid-dohjnao5>Cloudflare Pages + Regional Services</h2>
+              <div class="region-label" data-cid-dohjnao5>United States 🇺🇸</div>
+              <p data-cid-dohjnao5>
+                With Regional Services set to United States of America (US),
+                this Pages project will always return a &#39;colo&#39; within
+                the US.
+              </p>
+              <div class="code-section" id="box-5-code">
+                <pre><code data-cid-dohjnao5>Loading...</code></pre>
+              </div>
+            </div>
+          </li>
+          <li class="link-card" data-cid-dohjnao5>
+            <div data-cid-dohjnao5>
+              <h2 data-cid-dohjnao5>Cloudflare Pages + Regional Services</h2>
+              <div class="region-label" data-cid-dohjnao5>
+                European Union 🇪🇺
+              </div>
+              <p data-cid-dohjnao5>
+                With Regional Services set to European Union (EU), this Pages
+                project will always return a &#39;colo&#39; within the EU.
+              </p>
+              <div class="code-section" id="box-6-code">
+                <pre><code data-cid-dohjnao5>Loading...</code></pre>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <hr data-cid-j7pv25f6 />
+      <div data-cid-j7pv25f6>
+        <h2 data-cid-j7pv25f6>Customer Metadata Boundary</h2>
+        <p class="mini-description" data-cid-j7pv25f6>
+          Customer Metadata Boundary ensures that
+          <strong data-cid-j7pv25f6>end user traffic logs</strong>
+          (Customer Logs) processed by Cloudflare stay within the customer's
+          chosen region (EU and US currently supported).
+        </p>
+        <ul role="list" class="link-card-grid-cmb" data-cid-j7pv25f6>
+          <li class="link-card" data-cid-dohjnao5>
+            <div data-cid-dohjnao5>
+              <h2 data-cid-dohjnao5>httpRequestsAdaptiveGroups</h2>
+              <div class="region-label" data-cid-dohjnao5>Earth 🌍</div>
+              <p data-cid-dohjnao5>
+                Without Customer Metadata Boundary, essentially set to Earth,
+                all Customer Logs, like i.e.<span orange>HTTP Requests</span>, are available.
+              </p>
+              <canvas id="httpChart"></canvas>
+            </div>
+          </li>
+          <li class="link-card" data-cid-dohjnao5>
+            <div data-cid-dohjnao5>
+              <h2 data-cid-dohjnao5>workersInvocationsAdaptive</h2>
+              <div class="region-label" data-cid-dohjnao5>
+                European Union 🇪🇺
+              </div>
+              <p data-cid-dohjnao5>
+                With Customer Metadata Boundary set to the European Union (EU),
+                some Customer Logs, like i.e. <span orange>Workers Metrics</span>, might not be
+                available. They are empty.
+              </p>
+              <span codeblock><div id="workersChart"></div></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <hr data-cid-j7pv25f6 />
+    </main>
+  </body>
+  <script src="js/regionalservices.js"></script>
+  <script src="js/metadataboundary.js"></script>
+</html>
