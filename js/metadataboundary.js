@@ -2,7 +2,7 @@
 async function fetchData() {
     try {
         const response = await fetch(
-            "https://graphql-httprequestsadaptivegroups.dls-demo.workers.dev/"
+            "https://dlsdemo.com/getcmb-http"
         );
         const data = await response.json();
         return data.data.viewer.zones[0].httpRequestsAdaptiveGroups;
@@ -54,7 +54,7 @@ createChart();
 // Function to fetch GraphQL JSON data
 async function fetchGraphQLData() {
     try {
-        const response = await fetch('https://graphql-workersinvocationsadaptive.dls-demo.workers.dev/');
+        const response = await fetch('https://dlsdemo.com/getcmb-workers');
         const graphqlData = await response.json();
         const graphqlOutputDiv = document.getElementById('workersChart');
         // Convert the JSON data to a pretty-printed string
