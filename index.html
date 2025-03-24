@@ -3,13 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Localization Suite (DLS) Demos - Cloudflare</title>
     <meta
       name="description"
       content="Demo of Cloudflare Data Localization Suite (DLS) features."
     />
+    <title>Data Localization Suite (DLS) Demos - Cloudflare</title>
+
+    <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="preload" href="js/regionalservices.js" as="script" />
+    <link rel="preload" href="js/metadataboundary.js" as="script" />
+
+    <!-- External libraries -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+      integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -22,7 +38,7 @@
         <a
           href="https://developers.cloudflare.com/data-localization/"
           target="_blank"
-          rel="external nofollow noreferrer"
+          rel="noopener noreferrer"
           data-cid-j7pv25f6
           >Cloudflare DLS</a
         >
@@ -30,7 +46,9 @@
         control over their traffic while retaining the security benefits of a
         global network.
       </p>
+
       <hr data-cid-j7pv25f6 />
+
       <div data-cid-j7pv25f6>
         <h2 data-cid-j7pv25f6>Regional Services</h2>
         <p class="mini-description" data-cid-j7pv25f6>
@@ -44,34 +62,39 @@
           Regional Services is configured on
           <strong data-cid-j7pv25f6>Zone hostname-level</strong>.
         </p>
+
         <ul role="list" class="link-card-grid" data-cid-j7pv25f6>
+          <!-- Card 1 -->
           <li class="link-card" data-cid-dohjnao5>
             <div data-cid-dohjnao5>
               <h2 data-cid-dohjnao5>Cloudflare Workers</h2>
               <div class="region-label" data-cid-dohjnao5>Earth 🌍</div>
               <p data-cid-dohjnao5>
                 Without Regional Services, essentially set to Earth, this Worker
-                will always return a &#39;colo&#39; that is closest to the
-                client.
+                will always return a 'colo' that is closest to the client.
               </p>
               <div class="code-section" id="box-1-code">
                 <pre><code data-cid-dohjnao5>Loading...</code></pre>
               </div>
             </div>
           </li>
+
+          <!-- Card 2 -->
           <li class="link-card" data-cid-dohjnao5>
             <div data-cid-dohjnao5>
               <h2 data-cid-dohjnao5>Cloudflare Workers + Regional Services</h2>
               <div class="region-label" data-cid-dohjnao5>United States 🇺🇸</div>
               <p data-cid-dohjnao5>
                 With Regional Services set to United States of America (US),
-                this Worker will always return a &#39;colo&#39; within the US.
+                this Worker will always return a 'colo' within the US.
               </p>
               <div class="code-section" id="box-2-code">
                 <pre><code data-cid-dohjnao5>Loading...</code></pre>
               </div>
             </div>
           </li>
+
+          <!-- Card 3 -->
           <li class="link-card" data-cid-dohjnao5>
             <div data-cid-dohjnao5>
               <h2 data-cid-dohjnao5>Cloudflare Workers + Regional Services</h2>
@@ -80,41 +103,46 @@
               </div>
               <p data-cid-dohjnao5>
                 With Regional Services set to European Union (EU), this Worker
-                will always return a &#39;colo&#39; within the EU.
+                will always return a 'colo' within the EU.
               </p>
               <div class="code-section" id="box-3-code">
                 <pre><code data-cid-dohjnao5>Loading...</code></pre>
               </div>
             </div>
           </li>
+
+          <!-- Card 4 -->
           <li class="link-card" data-cid-dohjnao5>
             <div data-cid-dohjnao5>
               <h2 data-cid-dohjnao5>Cloudflare Pages</h2>
               <div class="region-label" data-cid-dohjnao5>Earth 🌍</div>
               <p data-cid-dohjnao5>
                 Without Regional Services, essentially set to Earth, this Pages
-                project will always return a &#39;colo&#39; that is closest to
-                the client.
+                project will always return a 'colo' that is closest to the
+                client.
               </p>
               <div class="code-section" id="box-4-code">
                 <pre><code data-cid-dohjnao5>Loading...</code></pre>
               </div>
             </div>
           </li>
+
+          <!-- Card 5 -->
           <li class="link-card" data-cid-dohjnao5>
             <div data-cid-dohjnao5>
               <h2 data-cid-dohjnao5>Cloudflare Pages + Regional Services</h2>
               <div class="region-label" data-cid-dohjnao5>United States 🇺🇸</div>
               <p data-cid-dohjnao5>
                 With Regional Services set to United States of America (US),
-                this Pages project will always return a &#39;colo&#39; within
-                the US.
+                this Pages project will always return a 'colo' within the US.
               </p>
               <div class="code-section" id="box-5-code">
                 <pre><code data-cid-dohjnao5>Loading...</code></pre>
               </div>
             </div>
           </li>
+
+          <!-- Card 6 -->
           <li class="link-card" data-cid-dohjnao5>
             <div data-cid-dohjnao5>
               <h2 data-cid-dohjnao5>Cloudflare Pages + Regional Services</h2>
@@ -123,7 +151,7 @@
               </div>
               <p data-cid-dohjnao5>
                 With Regional Services set to European Union (EU), this Pages
-                project will always return a &#39;colo&#39; within the EU.
+                project will always return a 'colo' within the EU.
               </p>
               <div class="code-section" id="box-6-code">
                 <pre><code data-cid-dohjnao5>Loading...</code></pre>
@@ -132,7 +160,9 @@
           </li>
         </ul>
       </div>
+
       <hr data-cid-j7pv25f6 />
+
       <div data-cid-j7pv25f6>
         <h2 data-cid-j7pv25f6>Customer Metadata Boundary</h2>
         <p class="mini-description" data-cid-j7pv25f6>
@@ -141,7 +171,7 @@
           (<a
             href="https://developers.cloudflare.com/data-localization/metadata-boundary/faq/"
             target="_blank"
-            rel="external nofollow noreferrer"
+            rel="noopener noreferrer"
             data-cid-j7pv25f6
             >Customer Logs</a
           >) processed by Cloudflare stay within the customer's chosen region.
@@ -150,19 +180,27 @@
           Customer Metadata Boundary is configured on
           <strong data-cid-j7pv25f6>Account-level</strong>.
         </p>
+
         <ul role="list" class="link-card-grid-cmb" data-cid-j7pv25f6>
+          <!-- CMB Card 1 -->
           <li class="link-card" data-cid-dohjnao5>
             <div data-cid-dohjnao5>
               <h2 data-cid-dohjnao5>httpRequestsAdaptiveGroups</h2>
               <div class="region-label" data-cid-dohjnao5>Earth 🌍</div>
               <p data-cid-dohjnao5>
                 Without Customer Metadata Boundary, essentially set to Earth,
-                all Customer Logs, like i.e.<span orange>HTTP Requests</span>,
+                all Customer Logs, like i.e. <span orange>HTTP Requests</span>,
                 are available.
               </p>
-              <canvas id="httpChart"></canvas>
+              <canvas
+                id="httpChart"
+                aria-label="HTTP Requests Chart"
+                role="img"
+              ></canvas>
             </div>
           </li>
+
+          <!-- CMB Card 2 -->
           <li class="link-card" data-cid-dohjnao5>
             <div data-cid-dohjnao5>
               <h2 data-cid-dohjnao5>workersInvocationsAdaptive</h2>
@@ -182,9 +220,12 @@
           </li>
         </ul>
       </div>
+
       <hr data-cid-j7pv25f6 />
     </main>
+
+    <!-- Scripts - placed at the bottom for better page loading performance -->
+    <script src="js/regionalservices.js" defer></script>
+    <script src="js/metadataboundary.js" defer></script>
   </body>
-  <script src="js/regionalservices.js"></script>
-  <script src="js/metadataboundary.js"></script>
 </html>
