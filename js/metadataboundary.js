@@ -4,8 +4,17 @@ async function fetchData() {
         const response = await fetch(
             "https://dlsdemo.com/getcmb-http"
         );
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
-        return data.data.viewer.zones[0].httpRequestsAdaptiveGroups;
+        console.log('Received data structure:', data); // Debug log
+        
+        if (!data || !data.data || !data.data.viewer) {
+            throw new Error('Invalid response structure');
+        }
+        
+        return data.data.viewer.zones[0].httpRequestsAdaptiveGroups || [];
     } catch (error) {
         console.error("Error fetching data:", error);
         return [];
